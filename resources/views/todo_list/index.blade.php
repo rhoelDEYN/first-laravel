@@ -12,10 +12,11 @@
                         <a href="{{ url('/todo_list/create') }}" class="btn btn-success btn-sm" title="Add New Student">
                             <i class="bi bi-plus"></i> Add New
                         </a>
-                        <br/>
-                        <br/>
                         <div class="table-responsive">
-                            <table class="table" style="width:100%">
+                            <div class="input-group mb-3 text-end">
+                                <input type="text" class="form-control shadow-none mt-3" aria-label="Sizing example input" id="searchInput" placeholder="Search...">
+                            </div>
+                            <table class="table" id="dataTable" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -68,4 +69,26 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let dataTable = document.getElementById('dataTable');
+            let searchInput = document.getElementById('searchInput');
+
+            searchInput.addEventListener('input', function () {
+                let filter = searchInput.value.toLowerCase();
+                let rows = dataTable.getElementsByTagName('tr');
+
+                for (let i = 0; i < rows.length; i++) {
+                    let rowText = rows[i].textContent.toLowerCase();
+
+                    if (rowText.includes(filter)) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+
 @endsection
