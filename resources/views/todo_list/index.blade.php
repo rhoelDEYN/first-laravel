@@ -1,7 +1,7 @@
 @extends('todo_list.layout')
 @section('content')
     <div class="container">
-        <div class="row mx-auto mt-5">
+        <div class="row mx-auto mt-5 shadow-lg py-3 rounded">
 
             <div class="col-lg-12 col-md-8">
                 <div class="card">

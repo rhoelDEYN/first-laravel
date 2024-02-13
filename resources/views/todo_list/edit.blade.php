@@ -1,7 +1,7 @@
 @extends('todo_list.layout')
 @section('content')
 
-<div class="card mt-5">
+<div class="card mt-5 col-8 mx-auto shadow-lg">
   <div class="card-header fw-bold">Edit Task</div>
     <div class="card-body">
 

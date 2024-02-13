@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="card">
+<div class="card mt-5 shadow-lg">
     <div class="card-header fw-bold">Todo List Page</div>
     <div class="card-body">
 
@@ -30,3 +30,4 @@
         </a>
     </div>
 </div>
+@stop
