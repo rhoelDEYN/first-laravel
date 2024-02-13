@@ -74,5 +74,4 @@ class TodoListController extends Controller
         TodoList::destroy($id);
         return redirect('todo_list')->with('flash_message', 'Task Deleted!');
     }
-    
 }

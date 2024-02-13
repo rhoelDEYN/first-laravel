@@ -16,8 +16,8 @@
             <label for="pending" class="mx-4">Pending</label>
             <input type="radio" id="done" name="status" value="1">
             <label for="done" class="mx-4">Done</label><br>
-            <input type="submit" value="Save" class="btn btn-success mt-3">
-            <a href="{{ url('/todo_list') }}" class="btn btn-outline-dark shadow-none btn-md mt-3 mx-2">
+            <input type="submit" value="Save" class="btn btn-outline-success mt-3">
+            <a href="{{ url('/todo_list') }}" class="btn btn-dark shadow-none btn-md mt-3 mx-2">
                 <i class="fa fa-plus" aria-hidden="true"></i> Cancel
             </a>
         </form>

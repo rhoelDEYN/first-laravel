@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/todo_list/create') }}" class="btn btn-success btn-sm" title="Add New Student">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                            <i class="bi bi-plus"></i> Add New
                         </a>
                         <br/>
                         <br/>
@@ -39,17 +39,17 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td style="width:25%">{{ $item->task }}</td>
-                                        <td style="width:50%">{{ $item->description }}</td>
+                                        <td style="width:40%">{{ $item->description }}</td>
                                         <td>{{ $item->status }}</td>
 
                                         <td>
-                                            <a href="{{ url('/todo_list/' . $item->id) }}" title="View Task"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/todo_list/' . $item->id . '/edit') }}" title="Edit Task"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/todo_list/' . $item->id) }}" title="View Task"><button class="btn btn-info btn-sm"><i class="bi bi-eye"></i> View</button></a>
+                                            <a href="{{ url('/todo_list/' . $item->id . '/edit') }}" title="Edit Task"><button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Edit</button></a>
 
                                             <form method="POST" action="{{ url('/todo_list' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Task" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                <button type="submit" class="btn btn-outline-danger btn-sm" title="Delete Task" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="bi bi-trash"></i> Delete</button>
                                             </form>
                                             {{-- <form method="POST" action="{{ url('/todo_list' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
