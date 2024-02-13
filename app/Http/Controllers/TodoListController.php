@@ -15,7 +15,7 @@ class TodoListController extends Controller
      */
     public function index(): View
     {
-        $todo_list = TodoList::paginate(3);
+        $todo_list = TodoList::paginate(5);
         return view ('todo_list.index')->with('todo_list', $todo_list);
     }
 
