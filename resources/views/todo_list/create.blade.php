@@ -8,9 +8,9 @@
         <form action="{{ url('todo_list') }}" method="post">
             {!! csrf_field() !!}
             <label>Task</label></br>
-            <input type="text" name="task" id="name" class="form-control shadow-none"></br>
+            <input type="text" name="task" id="name" class="form-control shadow-none" required></br>
             <label>Description</label></br>
-            <textarea type="text" name="description" id="address" class="form-control shadow-none"></textarea></br>
+            <textarea type="text" name="description" id="address" class="form-control shadow-none" required></textarea></br>
             <label>Status</label></br>
             <input type="radio" id="pending" name="status" value="0" checked>
             <label for="pending" class="mx-4">Pending</label>
